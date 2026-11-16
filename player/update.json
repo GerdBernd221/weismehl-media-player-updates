@@ -11,6 +11,18 @@
           "sha256": "3a05f9a061816634ef4ccd6d8968e5d771b69a8e93a9ed4a373938ada6e8308f"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.2",
+      "channel": "beta",
+      "date": "2026-11-16",
+      "notes": "- Packages for macOS now carry a fixed beta signature\n- No functional changes",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.2-macos.zip",
+          "sha256": "35c7793a0c9aaf23e2590c278a17c4c8247b4bbe2e8c8b2ecb235b1d4bab07c7"
+        }
+      }
     }
   ]
 }
