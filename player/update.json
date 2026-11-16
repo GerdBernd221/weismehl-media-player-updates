@@ -23,6 +23,18 @@
           "sha256": "35c7793a0c9aaf23e2590c278a17c4c8247b4bbe2e8c8b2ecb235b1d4bab07c7"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.3",
+      "channel": "beta",
+      "date": "2026-11-16",
+      "notes": "- Second package with the fixed beta signature, to test that macOS keeps its permissions after an update\n- No functional changes",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.3-macos.zip",
+          "sha256": "a54d67fce5f991703b9303f5153773f4621b3753dd79bd6ae254123926a38646"
+        }
+      }
     }
   ]
 }
