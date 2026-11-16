@@ -1,1 +1,16 @@
-{"releases": []}
+{
+  "releases": [
+    {
+      "version": "0.1.1-beta.1",
+      "channel": "beta",
+      "date": "2026-11-16",
+      "notes": "- First test of updates from inside the program\n- No functional changes",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.1-macos.zip",
+          "sha256": "3a05f9a061816634ef4ccd6d8968e5d771b69a8e93a9ed4a373938ada6e8308f"
+        }
+      }
+    }
+  ]
+}
