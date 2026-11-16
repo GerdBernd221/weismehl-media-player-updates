@@ -51,6 +51,22 @@
           "sha256": "6ae48968e3ab93ec403a72c5e54aa6365abf69d8768676028fd07014b1d5aff6"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.5",
+      "channel": "beta",
+      "date": "2026-11-16",
+      "notes": "- Input settings open as movable windows; several can be open at once\n- Colour correction per input: wheels or bars for lift, gamma, gain and offset, basic levels, colour tables (LUT, .cube)\n- Monitor in the colour page: picture, waveform, RGB parade, vectorscope\n- Sound delay per input and at the output\n- Transitions Wipe, Zoom and Slide\n- Add input opens as a window; untested on Windows: camera, recording, capture of single windows",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.5-macos.zip",
+          "sha256": "f81c320b28934140795f60a385321eb516df404925d359e5039a97d78468b1b9"
+        },
+        "windows": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.5-windows.zip",
+          "sha256": "dc9b6a7d56eadca2311979fd50ab91147a8e0e8b15dad02a9f9cda5f8ea120ad"
+        }
+      }
     }
   ]
 }
