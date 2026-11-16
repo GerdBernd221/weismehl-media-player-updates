@@ -35,6 +35,22 @@
           "sha256": "a54d67fce5f991703b9303f5153773f4621b3753dd79bd6ae254123926a38646"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.4",
+      "channel": "beta",
+      "date": "2026-11-16",
+      "notes": "- Audio mixer has its own tab; the Audio Mixer button opens it\n- Fixed: Outputs could appear below the mixer\n- First package for Windows (screen capture works; window capture, camera, sound and recording are untested there)",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.4-macos.zip",
+          "sha256": "82d5b373da6bf3f0e452d9c968f5fdaabf4dc8c62c386da64c780a4bbd5d3abe"
+        },
+        "windows": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.4-windows.zip",
+          "sha256": "6ae48968e3ab93ec403a72c5e54aa6365abf69d8768676028fd07014b1d5aff6"
+        }
+      }
     }
   ]
 }
