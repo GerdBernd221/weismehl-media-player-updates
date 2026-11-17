@@ -83,6 +83,22 @@
           "sha256": "a5943c3c8aa28f1eb1afa8db08c712f8a19e971771ddf3b0fc65cf7fc18aa9db"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.7",
+      "channel": "beta",
+      "date": "2026-11-17",
+      "notes": "- Audio on several devices: master, the buses A to D, listening (solo) and timecode (LTC) can each play on a device of their own (Settings, Audio), with a delay per bus\n- Audio mixer: faders with a dB scale up to +10 dB, the level meter (green, yellow, red) inside the fader, every channel a panel of its own; a yellow tag at the top tells you when no sound goes out\n- New inputs: Stream (SRT, RTSP, RTMP, UDP, HLS), NDI and Slideshow (the pictures of a folder)\n- Windows: parts of the program as windows of their own, and workspaces that save and restore the arrangement\n- Outputs: size, refresh rate and rotation per output; recording with a folder and file name of your choice\n- Cues: groups (also random and nested), Take and Playback cues, fades on effect values; tally can be received (TSL, vMix) and shown on controller buttons\n- Remote: Blackmagic ATEM switchers, a module for Bitfocus Companion\n- The first start opens the test project \"Weismehl Demo\"\n- Much of this is not yet tested on real equipment – please use the Feedback button",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.7-macos.zip",
+          "sha256": "9e99f9b5616617243e1654d12403925d08e6be432c4bcf9684ffff77915b8774"
+        },
+        "windows": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.7-windows.zip",
+          "sha256": "673e004fcf41ef495dad2303438042ddbb47909417395fa5568a311e144855ef"
+        }
+      }
     }
   ]
 }
