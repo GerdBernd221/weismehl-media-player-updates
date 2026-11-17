@@ -67,6 +67,22 @@
           "sha256": "dc9b6a7d56eadca2311979fd50ab91147a8e0e8b15dad02a9f9cda5f8ea120ad"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.6",
+      "channel": "beta",
+      "date": "2026-11-17",
+      "notes": "- Feedback button: report a bug or ask for a feature from inside the program, with a picture of what you mean\n- Add input and the Media page are sorted by kind: Video, Image, Audio file, Convert, Camera, Screen, Audio input, Title, Colour\n- Drag a tile to reorder the inputs, or drop it on the preview or program picture; drop files from the Explorer onto the window to add them\n- Undo and redo (Ctrl+Z / Ctrl+Y) for removing, moving, renaming and adding inputs\n- Recording as MP4 or MOV (Settings, Recording); MP4 is the default on Windows\n- Since beta.5 also: streaming, audio mixer with EQ, compressor and gate, stinger, cue lists, MultiView, several canvases, keyframes, lighting, tally, PTZ cameras and projectors – most of it not yet tested on real equipment",
+      "files": {
+        "macos": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.6-macos.zip",
+          "sha256": "9b9607872468f3d25731881a4fc50943f4936fc589c88899a4dc997ab557db88"
+        },
+        "windows": {
+          "file": "WeismehlMediaPlayer-0.1.1-beta.6-windows.zip",
+          "sha256": "a5943c3c8aa28f1eb1afa8db08c712f8a19e971771ddf3b0fc65cf7fc18aa9db"
+        }
+      }
     }
   ]
 }
