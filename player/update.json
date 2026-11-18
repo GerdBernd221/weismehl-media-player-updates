@@ -99,6 +99,22 @@
           "sha256": "673e004fcf41ef495dad2303438042ddbb47909417395fa5568a311e144855ef"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.8",
+      "channel": "beta",
+      "date": "2026-11-18",
+      "notes": "- Registration: on the first start the program asks for your name, company and e-mail once – so we know who is testing\n- Test versions now run for 60 days after they were built; a yellow tag shows a week before the end, About shows the date\n- New inputs: Playlist (films one after another); on Windows also a single window of another program and a web page or YouTube video\n- Layers: crop and border per layer; colour tables (LUT) can also be loaded as PNG; the test project can be restored\n- Preview quality can be chosen (Eco to Full); the footer shows frame rate and load\n- Timing: a screen only sets the pace when its refresh rate matches the project – recordings at 50 fps next to a 60 Hz or 120 Hz screen no longer get doubled frames\n- An input that is on air can no longer be removed by mistake\n- Windows: the package brings FFmpeg along; helper programs (FFmpeg) now end together with the program\n- Much of this is not yet tested on real equipment – please use the Feedback button",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.8/WeismehlMediaPlayer-0.1.1-beta.8-macos.zip",
+          "sha256": "cb41e877c0be62093caf0e6eee21f2d791ccfea552b4bf1e90e32c97bececedb"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.8/WeismehlMediaPlayer-0.1.1-beta.8-windows.zip",
+          "sha256": "97dabf62879cab089f194efff7c75e72b43bdb5511cc5530019b3dd649aa125c"
+        }
+      }
     }
   ]
 }
