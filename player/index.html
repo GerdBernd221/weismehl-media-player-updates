@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weismehl Media Player – Download</title>
+<meta name="robots" content="noindex">
+<!-- Download-Seite der Testversionen. Sie liest update.json aus demselben Ordner und zeigt immer die neueste Version;
+     der Versions-Build legt nur Pakete und Liste ab, diese Seite bleibt, wie sie ist. -->
+<style>
+  :root { --navy: #222d44; --panel: #2b3852; --line: #3b4a69; --text: #eef3fb; --dim: #b8c4da; --orange: #ff8f45; --blue: #5cb8e8; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--navy); color: var(--text); font: 16px/1.5 Montserrat, "Segoe UI", Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 56px; }
+  img.logo { height: 64px; display: block; margin-bottom: 28px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+  h1 span { color: var(--orange); }
+  .lead { color: var(--dim); margin: 0 0 28px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px; margin-bottom: 18px; }
+  .card h2 { font-size: 19px; margin: 0 0 4px; }
+  .meta { color: var(--dim); font-size: 14px; margin-bottom: 16px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 14px; }
+  a.btn { flex: 1 1 220px; display: block; text-align: center; padding: 14px 16px; border-radius: 8px; background: var(--orange); color: #1a1a1a; font-weight: 700; text-decoration: none; }
+  a.btn small { display: block; font-weight: 500; font-size: 12px; opacity: .8; }
+  a.btn:hover { filter: brightness(1.08); }
+  ul { margin: 0; padding-left: 20px; color: var(--dim); font-size: 14px; }
+  li { margin-bottom: 4px; }
+  h3 { font-size: 15px; margin: 0 0 8px; }
+  details { color: var(--dim); font-size: 14px; }
+  details summary { cursor: pointer; color: var(--text); font-weight: 600; }
+  details a { color: var(--blue); }
+  table { border-collapse: collapse; margin-top: 10px; width: 100%; }
+  td { padding: 5px 12px 5px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .sha { font-family: Consolas, monospace; font-size: 11px; word-break: break-all; color: var(--dim); }
+  footer { color: var(--dim); font-size: 13px; margin-top: 28px; }
+  footer a { color: var(--blue); }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.svg" alt="Weismehl Media">
+  <h1>Weismehl Media Player <span>· Testversion</span></h1>
+  <p class="lead">Medienserver und Bildmischer für Windows und Mac. Dies ist eine Testversion (Beta) – bitte noch nicht ungeprüft in einer Show einsetzen, bei der nichts schiefgehen darf.</p>
+
+  <div class="card" id="latest"><h2>Die Liste der Versionen wird geladen …</h2></div>
+
+  <div class="card">
+    <h3>Beim ersten Start</h3>
+    <ul>
+      <li>Paket auspacken und das Programm starten – eine Installation gibt es nicht.</li>
+      <li>Die Testversion hat noch kein Zertifikat, deshalb warnt das System einmal. <b>Windows:</b> „Weitere Informationen", dann „Trotzdem ausführen". <b>Mac:</b> Rechtsklick auf das Programm, dann „Öffnen".</li>
+      <li>Beim ersten Start öffnet sich das Testprojekt „Weismehl Demo".</li>
+      <li>Fehler und Wünsche: der Knopf „Feedback" oben im Programm.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <details><summary>Frühere Versionen und Prüfsummen</summary><table id="older"></table></details>
+  </div>
+
+  <footer>Weismehl Media GmbH · <a href="https://weismehlmedia.de">weismehlmedia.de</a></footer>
+</main>
+<script>
+  const text = (tag, s, cls) => { const e = document.createElement(tag); e.textContent = s; if (cls) e.className = cls; return e; };
+  const NAMES = { windows: 'Windows', macos: 'Mac' };
+  fetch('update.json', { cache: 'no-store' }).then((r) => r.json()).then((data) => {
+    const all = (data.releases || []).slice().reverse();
+    const box = document.getElementById('latest');
+    box.textContent = '';
+    if (!all.length) { box.append(text('h2', 'Noch keine Version veröffentlicht.')); return; }
+    const r = all[0];
+    box.append(text('h2', 'Version ' + r.version), text('div', (r.date || '') + (r.channel === 'beta' ? ' · Beta' : ''), 'meta'));
+    const buttons = text('div', '', 'buttons');
+    for (const key of ['windows', 'macos']) {
+      const f = r.files && r.files[key];
+      if (!f) continue;
+      const a = text('a', 'Download für ' + NAMES[key], 'btn');
+      a.href = f.file;
+      a.append(text('small', f.file));
+      buttons.append(a);
+    }
+    box.append(buttons);
+    const notes = String(r.notes || '').split('\n').map((l) => l.replace(/^[-•]\s*/, '').trim()).filter(Boolean);
+    if (notes.length) { box.append(text('h3', 'Neu in dieser Version (englisch, wie im Programm)')); const ul = document.createElement('ul'); notes.forEach((n) => ul.append(text('li', n))); box.append(ul); }
+    const table = document.getElementById('older');
+    for (const v of all) for (const key of ['windows', 'macos']) {
+      const f = v.files && v.files[key];
+      if (!f) continue;
+      const tr = document.createElement('tr');
+      const link = text('a', f.file); link.href = f.file;
+      const td = document.createElement('td'); td.append(link);
+      tr.append(text('td', v.version), text('td', NAMES[key]), td, text('td', 'SHA-256 ' + (f.sha256 || '–'), 'sha'));
+      table.append(tr);
+    }
+  }).catch(() => { document.getElementById('latest').textContent = 'Die Liste der Versionen ließ sich nicht laden. Bitte später noch einmal versuchen.'; });
+</script>
+</body>
+</html>
