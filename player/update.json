@@ -131,6 +131,22 @@
           "sha256": "a32985b7723582b9e94ff76a25f424d93d73acd890a1360ae967372761cec271"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.10",
+      "channel": "beta",
+      "date": "2026-11-18",
+      "notes": "- Import: drag files from the Explorer or Finder into the window – videos that are not HAP are converted by themselves, with a queue, progress and Cancel\n- NDI on Windows: the package brings the NDI library along – NDI sources work without installing the NDI Tools (on the Mac the NDI Tools are still needed)\n- Crash reports: if the program closed unexpectedly, it asks at the next start whether it may send us a report – only if you agree, and without names of files, inputs, shows or folders\n- Log: every session writes a log into the folder \"logs\" in the media folder; Feedback with technical details includes its last lines and your computer (processor, memory, graphics card, screen sizes)\n- Terms of Use: the registration now asks you to accept them; you find them under About and as EULA.html in the package\n- T-bar: it no longer jumps at the end of a fade – after a fade by hand the lever rests at its end, and the next fade goes the other way, as on a vision mixer\n- New setting Look, Live picture: always in the right window (as before) or alternating (A/B) – after every change the window with the next picture becomes live\n- Audio mixer: every bus has a note that is always visible at its channel – for example where the bus goes\n- Fixed: after a crash of the picture loop the program could stay in the background on Windows and block a new start\n- Much of this is not yet tested on real equipment – please use the Feedback button",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.10/WeismehlMediaPlayer-0.1.1-beta.10-macos.zip",
+          "sha256": "c3be2b48d37517ee4eead2301dad1b91bc8a318ad62f8a6379d2cb7355b697e5"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.10/WeismehlMediaPlayer-0.1.1-beta.10-windows.zip",
+          "sha256": "e9e3cabb2cc199e3eb8cf57e044718eb0ed01c7354e116640e94db3e0805d6d1"
+        }
+      }
     }
   ]
 }
