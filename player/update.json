@@ -115,6 +115,22 @@
           "sha256": "97dabf62879cab089f194efff7c75e72b43bdb5511cc5530019b3dd649aa125c"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.9",
+      "channel": "beta",
+      "date": "2026-11-18",
+      "notes": "- Mac: a web page or a YouTube video can now be an input on the Mac as well (the browser part is downloaded once when you first use it)\n- Mac: the package brings FFmpeg along – import, recording, streaming and network inputs work without installing anything\n- Web page as an input: the first command after the browser part had restarted was lost (Reload, Play/Pause) – fixed\n- Much of this is not yet tested on real equipment – please use the Feedback button",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.9/WeismehlMediaPlayer-0.1.1-beta.9-macos.zip",
+          "sha256": "4c627c70e723504acff656f0a3246c2c14f1b930af8d78f3471f111b1ebf7dda"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.9/WeismehlMediaPlayer-0.1.1-beta.9-windows.zip",
+          "sha256": "a32985b7723582b9e94ff76a25f424d93d73acd890a1360ae967372761cec271"
+        }
+      }
     }
   ]
 }
