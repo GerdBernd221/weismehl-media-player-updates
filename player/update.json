@@ -147,6 +147,22 @@
           "sha256": "e9e3cabb2cc199e3eb8cf57e044718eb0ed01c7354e116640e94db3e0805d6d1"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.11",
+      "channel": "beta",
+      "date": "2026-11-19",
+      "notes": "- Light: a new Light page – add fixtures from a library of 650 types (Open Fixture Library) or import GDTF files from the manufacturer, arrange them on the stage, select by click or frame, set colour, position, gobo and more in the programmer\n- Light: 3D view of the stage – beams, colours, positions and gobos as programmed, from the front, the top or the side; drag to turn\n- Light: looks (store, recall with fade, add as a cue) and effects – Chase, Rainbow, Circle and Wave on any group of fixtures\n- Light: USB-DMX adapters (Enttec DMX USB Pro, Open DMX) besides Art-Net and sACN\n- DMX in: a lighting desk can control the player – a channel fires GO, another moves the T-bar or the master (Settings → Light)\n- Picture effects: Hue shift, Pixelate, Mirror, Kaleidoscope, Posterize, RGB shift, Edges and Invert for every input (Picture → Effects → Stylise)\n- Outputs: Delay of 0 to 10 frames per output, so a slower projector and an LED wall show in step\n- Start with this computer: for installations the player starts by itself, waits, loads a show and fires the first cue (Settings → Project)\n- NDI out: send the program as an NDI source\n- Webcam: the program as a camera for Zoom, Teams and others (Windows)\n- Audio: effects on every bus and the master (EQ, compressor, limiter)\n- MultiCorder: record several inputs at the same time\n- Much of this is not yet tested on real equipment – please use the Feedback button",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.11/WeismehlMediaPlayer-0.1.1-beta.11-macos.zip",
+          "sha256": "8079e2b4505244ebe3aa412fbd54401d2657d7bd03d67c49469aebdaea46d623"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.11/WeismehlMediaPlayer-0.1.1-beta.11-windows.zip",
+          "sha256": "f59859091dce4f456cf5b5783007ff5715e0c4ea640bed41d11ad352c136fe05"
+        }
+      }
     }
   ]
 }
