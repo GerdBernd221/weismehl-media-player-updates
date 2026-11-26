@@ -180,6 +180,23 @@
           "sha256": "79331a2d941c545eb0ae0fd254e5a72a7ef934c74c11ad0c472ff7b4bf2bd9c9"
         }
       }
+    },
+    {
+      "version": "0.1.1-beta.13",
+      "channel": "beta",
+      "date": "2026-11-26",
+      "notes": "- PowerPoint as an input (new, Windows with PowerPoint installed): Add input → PowerPoint. Animations, transitions and videos look exactly like in PowerPoint. Prev and Next on the tile show the slide, e.g. 3 / 12.\n- Presenter (new): in the input window under Video, switch on Presenter – a wireless clicker (MasterCue, PerfectCue, Logitech …) then steps the presentation, even when another window is in front. Right arrow / Page down: next, Left arrow / Page up: back, B: black screen.\n- Several computers: Devices → Nodes shows every player on the network – join with one click, the media are copied to the node by themselves. The Outputs page is now called Stage; each output has a Computer field.\n- Performance in the footer now shows the render time: average and longest picture of the last second, e.g. 2.0 ms · max 11 ms.\n- Timeline: the view keeps its zoom when you switch between timelines.\n- Mac: Syphon output sends program to Resolume, MadMapper, OBS and others on the same Mac.\n- Licence: Help → About has a field for a licence code. The beta keeps running without one.\n- Limits: up to 64 slices per show and 2,000 cues per cue list.\n- Stability: very long frames and slow commands are written to the session log, so a report shows what happened.\n- The manual is now also in English.\n- Coming next week: the Windows packages will be signed by Microsoft, very likely the Mac packages by Apple too – no more warnings on first start, and the webcam output finally works on the Mac.\n- Much of this has not been tested on real equipment yet. Tell us what you notice via Help → Report a bug or ask for a feature.",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.13/WeismehlMediaPlayer-0.1.1-beta.13-macos.zip",
+          "sha256": "9caf0ace7229199fd22ecae66248c22479601056f7fef6d7001aac3fcaef3696"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.13/WeismehlMediaPlayer-0.1.1-beta.13-windows.zip",
+          "sha256": "efc90c2ffc2d3099ca78576873fd3ff9bf122b3391488022548e6fff72e0254a"
+        }
+      },
+      "notes_de": "- PowerPoint als Input (neu, Windows mit installiertem PowerPoint): Add input → PowerPoint. Animationen, Übergänge und Videos sehen aus wie in PowerPoint. Prev und Next auf der Kachel, dazu die Folie, z. B. 3 / 12.\n- Presenter (neu): Im Input-Fenster unter Video schaltest du Presenter ein – dann steuert ein Funk-Presenter (MasterCue, PerfectCue, Logitech …) die Präsentation, auch wenn ein anderes Fenster vorne ist. Pfeil rechts / Bild ab: weiter, Pfeil links / Bild auf: zurück, B: Schwarzbild.\n- Mehrere Rechner: Devices → Nodes zeigt jeden Player im Netz – mit einem Klick verbinden, die Medien kopiert der Player selbst auf den Node. Die Seite Outputs heißt jetzt Stage; jeder Output hat ein Feld Computer.\n- Die Leistungsanzeige in der Fußleiste zeigt jetzt die Renderzeit: Mittel und längstes Bild der letzten Sekunde, z. B. 2.0 ms · max 11 ms.\n- Timeline: Die Ansicht behält ihren Zoom, wenn du zwischen Timelines wechselst.\n- Mac: Der Syphon-Output schickt Program an Resolume, MadMapper, OBS und andere auf demselben Mac.\n- Lizenz: Unter Help → About gibt es ein Feld für einen Lizenz-Code. Die Beta läuft weiter ohne.\n- Grenzen: bis zu 64 Slices je Show und 2.000 Cues je Cue-Liste.\n- Stabilität: Sehr lange Bilder und langsame Befehle stehen im Protokoll der Sitzung – eine Meldung zeigt dann, was passiert ist.\n- Das Handbuch gibt es jetzt auch auf Englisch.\n- Ab kommender Woche: Die Windows-Pakete sind dann von Microsoft signiert, die Mac-Pakete höchstwahrscheinlich auch von Apple – keine Warnungen mehr beim ersten Start, und der Webcam Output läuft endlich auch auf dem Mac.\n- Vieles davon ist noch nicht an echter Technik geprüft. Schreib uns über Help → Report a bug or ask for a feature, was dir auffällt."
     }
   ]
 }
