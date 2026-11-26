@@ -197,6 +197,23 @@
         }
       },
       "notes_de": "- PowerPoint als Input (neu, Windows mit installiertem PowerPoint): Add input → PowerPoint. Animationen, Übergänge und Videos sehen aus wie in PowerPoint. Prev und Next auf der Kachel, dazu die Folie, z. B. 3 / 12.\n- Presenter (neu): Im Input-Fenster unter Video schaltest du Presenter ein – dann steuert ein Funk-Presenter (MasterCue, PerfectCue, Logitech …) die Präsentation, auch wenn ein anderes Fenster vorne ist. Pfeil rechts / Bild ab: weiter, Pfeil links / Bild auf: zurück, B: Schwarzbild.\n- Mehrere Rechner: Devices → Nodes zeigt jeden Player im Netz – mit einem Klick verbinden, die Medien kopiert der Player selbst auf den Node. Die Seite Outputs heißt jetzt Stage; jeder Output hat ein Feld Computer.\n- Die Leistungsanzeige in der Fußleiste zeigt jetzt die Renderzeit: Mittel und längstes Bild der letzten Sekunde, z. B. 2.0 ms · max 11 ms.\n- Timeline: Die Ansicht behält ihren Zoom, wenn du zwischen Timelines wechselst.\n- Mac: Der Syphon-Output schickt Program an Resolume, MadMapper, OBS und andere auf demselben Mac.\n- Lizenz: Unter Help → About gibt es ein Feld für einen Lizenz-Code. Die Beta läuft weiter ohne.\n- Grenzen: bis zu 64 Slices je Show und 2.000 Cues je Cue-Liste.\n- Stabilität: Sehr lange Bilder und langsame Befehle stehen im Protokoll der Sitzung – eine Meldung zeigt dann, was passiert ist.\n- Das Handbuch gibt es jetzt auch auf Englisch.\n- Ab kommender Woche: Die Windows-Pakete sind dann von Microsoft signiert, die Mac-Pakete höchstwahrscheinlich auch von Apple – keine Warnungen mehr beim ersten Start, und der Webcam Output läuft endlich auch auf dem Mac.\n- Vieles davon ist noch nicht an echter Technik geprüft. Schreib uns über Help → Report a bug or ask for a feature, was dir auffällt."
+    },
+    {
+      "version": "0.1.1-beta.14",
+      "channel": "beta",
+      "date": "2026-11-26",
+      "notes": "- Text titles (new): Add input → Title → style \"Text (free)\". Kicker, headline over several lines (| starts a new line, *word* turns orange), subline; position, size, alignment and your own font (put the .ttf files into the folder fonts in the media folder, e.g. Montserrat). Change everything in the title window – it shows at once, even on air.\n- Title animations (new): fade in, rise line by line, word by word, slide in from the left, typewriter – with duration and delay. They start when the title goes on air.\n- Upright 9:16 (new): Settings → Recording → \"Set up 9:16\". One take, two files: the normal recording and an upright 1080 × 1920 file for Reels, TikTok and Shorts. \"Section\" chooses which part of the picture it shows.\n- Recordings now have their exact size – for example exactly 1080 × 1920 when upright.\n- Stage: the picture always fits the window, also upright canvases and portrait screens. Zoom with the mouse wheel or − / Fit / +.\n- Much of this has not been tested on real equipment yet. Tell us what you notice via Help → Report a bug or ask for a feature.",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.14/WeismehlMediaPlayer-0.1.1-beta.14-macos.zip",
+          "sha256": "104f81274493005b426cc62d0103e93488d2ff3ada9b06636abcbaa08e75f194"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.1.1-beta.14/WeismehlMediaPlayer-0.1.1-beta.14-windows.zip",
+          "sha256": "b3b0192e9740c585a048ea1133f57598938b4580c731decd6ee323b4e35c10ad"
+        }
+      },
+      "notes_de": "- Text-Titel (neu): Add input → Title → Form „Text (free)“. Kopfzeile, Überschrift über mehrere Zeilen (| beginnt eine neue Zeile, *Wort* wird orange), Unterzeile; Lage, Größe, Ausrichtung und deine eigene Schrift (die .ttf-Dateien in den Ordner fonts im Medienordner legen, z. B. Montserrat). Alles änderst du im Titel-Fenster – sofort im Bild, auch auf Sendung.\n- Animationen für Titel (neu): Einblenden, Zeile für Zeile aufsteigen, Wort für Wort, von links hineinschieben, Schreibmaschine – mit Dauer und Verzögerung. Sie starten, sobald der Titel auf Sendung geht.\n- Hochformat 9:16 (neu): Settings → Recording → „Set up 9:16“. Ein Take, zwei Dateien: die normale Aufnahme und eine hochkante in 1080 × 1920 für Reels, TikTok und Shorts. Mit „Section“ wählst du den Ausschnitt.\n- Aufnahmen haben jetzt ihre genaue Größe – hochkant zum Beispiel genau 1080 × 1920.\n- Stage: Das Bild passt immer ins Fenster, auch bei hochkanten Canvases und Hochkant-Bildschirmen. Zoomen mit dem Mausrad oder − / Fit / +.\n- Vieles davon ist noch nicht an echter Technik geprüft. Schreib uns über Help → Report a bug or ask for a feature, was dir auffällt."
     }
   ]
 }
