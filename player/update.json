@@ -214,6 +214,33 @@
         }
       },
       "notes_de": "- Text-Titel (neu): Add input → Title → Form „Text (free)“. Kopfzeile, Überschrift über mehrere Zeilen (| beginnt eine neue Zeile, *Wort* wird orange), Unterzeile; Lage, Größe, Ausrichtung und deine eigene Schrift (die .ttf-Dateien in den Ordner fonts im Medienordner legen, z. B. Montserrat). Alles änderst du im Titel-Fenster – sofort im Bild, auch auf Sendung.\n- Animationen für Titel (neu): Einblenden, Zeile für Zeile aufsteigen, Wort für Wort, von links hineinschieben, Schreibmaschine – mit Dauer und Verzögerung. Sie starten, sobald der Titel auf Sendung geht.\n- Hochformat 9:16 (neu): Settings → Recording → „Set up 9:16“. Ein Take, zwei Dateien: die normale Aufnahme und eine hochkante in 1080 × 1920 für Reels, TikTok und Shorts. Mit „Section“ wählst du den Ausschnitt.\n- Aufnahmen haben jetzt ihre genaue Größe – hochkant zum Beispiel genau 1080 × 1920.\n- Stage: Das Bild passt immer ins Fenster, auch bei hochkanten Canvases und Hochkant-Bildschirmen. Zoomen mit dem Mausrad oder − / Fit / +.\n- Vieles davon ist noch nicht an echter Technik geprüft. Schreib uns über Help → Report a bug or ask for a feature, was dir auffällt."
+    },
+    {
+      "version": "0.2.0-beta.1",
+      "channel": "beta",
+      "date": "2026-11-28",
+      "notes": "- Version 0.2 begins: from now on the player comes as a signed program with an installer.\n- Windows: the player is now signed by Weismehl Media GmbH. Windows names us as the publisher instead of \"unknown\". For the first downloads SmartScreen may still ask once until Microsoft knows the program better.\n- Mac: the player is now signed with the Developer ID of Weismehl Media GmbH and notarized by Apple. It opens without a warning, also straight from the download. It now also comes as a DMG: open it and drag the player to Applications.\n- Mac, once after the update: because the signature changes, macOS asks again for the camera and microphone. Please allow screen recording again under System Settings → Privacy & Security → Screen & System Audio Recording: remove the old \"Weismehl Media Player\" entry with \"−\", add it again with \"+\" and switch it on.\n- Windows installer (new): a setup file instead of the ZIP. It installs for your user without administrator rights, adds the player to the Start menu and can be removed under Settings → Apps. Your shows and settings stay where they are.\n- On start (new): the very first start opens the demo project \"Weismehl Demo\" with all test pictures. After that, Settings → Project → \"When the player starts\" chooses: where you left off, a start show of your choice, or an empty show.\n- Find devices on the network (new): Devices → Find devices on the network… lists cameras, projectors, switchers and other gear, also with addresses from another network. An ATEM is found even with an address of its own.\n- Countdown: play and pause right on the tile. The Cues page shows the live picture, and cues can be copied.\n- Titles are drawn on their own, so a busy title no longer holds up the picture.\n- PowerPoint: removing the input now closes the presentation.\n- Much of this has not been tested on real equipment yet. Tell us what you notice via Help → Report a bug or ask for a feature.",
+      "files": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.2.0-beta.1/WeismehlMediaPlayer-0.2.0-beta.1-macos.zip",
+          "sha256": "4a2da614244d0e8b045b5ee5019814649ff494c5026a4fe1b0ccd6341edabb37"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.2.0-beta.1/WeismehlMediaPlayer-0.2.0-beta.1-windows.zip",
+          "sha256": "e49529cbef76d378563ab5566a0a7f780eaf0e5c76aa313d3492a2101d8367ab"
+        }
+      },
+      "installers": {
+        "macos": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.2.0-beta.1/WeismehlMediaPlayer-0.2.0-beta.1-macos.dmg",
+          "sha256": "2b3ea8d32cc79a4572de43377c3c3c5bff8e6d26e17ec5bf5621a614ae7c2409"
+        },
+        "windows": {
+          "file": "https://github.com/GerdBernd221/weismehl-media-player-updates/releases/download/v0.2.0-beta.1/WeismehlMediaPlayer-0.2.0-beta.1-windows-installer.exe",
+          "sha256": "98dade762c782a35722a32dc5a72f25dbab2ca264bad7d68a2892d1194c9a662"
+        }
+      },
+      "notes_de": "- Version 0.2 beginnt: Ab jetzt kommt der Player als signiertes Programm mit Installer.\n- Windows: Der Player ist jetzt von der Weismehl Media GmbH signiert. Windows nennt uns als Herausgeber statt „unbekannt“. Bei den ersten Downloads kann SmartScreen noch einmal nachfragen, bis Microsoft das Programm besser kennt.\n- Mac: Der Player ist jetzt mit der Developer ID der Weismehl Media GmbH signiert und von Apple geprüft. Er öffnet sich ohne Warnung, auch direkt aus dem Download. Neu gibt es ihn auch als DMG: öffnen und in „Programme“ ziehen.\n- Mac, einmalig nach dem Update: Weil sich die Signatur ändert, fragt macOS neu nach Kamera und Mikrofon. Die Bildschirmaufnahme bitte in den Systemeinstellungen → Datenschutz & Sicherheit → Bildschirm- & Systemaudioaufnahme neu freigeben: den alten Eintrag „Weismehl Media Player“ mit „−“ entfernen, mit „+“ neu hinzufügen und einschalten.\n- Windows-Installer (neu): eine Setup-Datei statt des ZIP. Sie installiert für deinen Benutzer ohne Administratorrechte, legt den Player ins Startmenü und lässt sich unter Einstellungen → Apps wieder entfernen. Deine Shows und Einstellungen bleiben, wo sie sind.\n- Beim Start (neu): Der allererste Start öffnet das Demoprojekt „Weismehl Demo“ mit allen Testbildern. Danach wählst du unter Settings → Project → „When the player starts“: dort weitermachen, wo du aufgehört hast, eine Start-Show deiner Wahl oder eine leere Show.\n- Geräte im Netz finden (neu): Devices → Find devices on the network… zeigt Kameras, Projektoren, Bildmischer und andere Technik, auch mit Adressen aus einem anderen Netz. Ein ATEM wird auch mit selbst vergebener Adresse gefunden.\n- Countdown: Play und Pause direkt auf der Kachel. Die Cue-Seite zeigt das Live-Bild, und Cues lassen sich kopieren.\n- Titel werden für sich gezeichnet – ein aufwendiger Titel hält das Bild nicht mehr auf.\n- PowerPoint: Wird der Eingang entfernt, schließt sich die Präsentation.\n- Vieles davon ist noch nicht an echter Technik geprüft. Schreib uns über Help → Report a bug or ask for a feature, was dir auffällt."
     }
   ]
 }
