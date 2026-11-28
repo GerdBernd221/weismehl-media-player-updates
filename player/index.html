@@ -34,6 +34,7 @@
   .sha { font-family: Consolas, monospace; font-size: 11px; word-break: break-all; color: var(--dim); }
   footer { color: var(--dim); font-size: 13px; margin-top: 28px; }
   footer a { color: var(--blue); }
+.meta a{color:inherit;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -45,11 +46,12 @@
   <div class="card" id="latest"><h2>Die Liste der Versionen wird geladen …</h2></div>
 
   <div class="card">
-    <h3>Beim ersten Start</h3>
+    <h3>Installieren und erster Start</h3>
     <ul>
-      <li>Paket auspacken und das Programm starten – eine Installation gibt es nicht.</li>
-      <li>Die Testversion hat noch kein Zertifikat, deshalb warnt das System einmal. <b>Windows:</b> „Weitere Informationen", dann „Trotzdem ausführen". <b>Mac:</b> Rechtsklick auf das Programm, dann „Öffnen".</li>
+      <li><b>Windows:</b> den Installer starten und dem Setup folgen – er braucht keine Administratorrechte und legt den Player ins Startmenü. <b>Mac:</b> die DMG öffnen und das Programm in den Ordner „Programme" ziehen.</li>
+      <li>Ab Version 0.2 ist der Player von der Weismehl Media GmbH signiert. Bei den ersten Downloads kann Windows SmartScreen noch einmal nachfragen: „Weitere Informationen", dann „Trotzdem ausführen".</li>
       <li>Beim ersten Start öffnet sich das Testprojekt „Weismehl Demo".</li>
+      <li>Ohne Installation geht es weiter mit dem ZIP – auspacken und das Programm starten.</li>
       <li>Fehler und Wünsche: der Knopf „Feedback" oben im Programm.</li>
     </ul>
   </div>
@@ -71,23 +73,32 @@
     const r = all[0];
     box.append(text('h2', 'Version ' + r.version), text('div', (r.date || '') + (r.channel === 'beta' ? ' · Beta' : ''), 'meta'));
     const buttons = text('div', '', 'buttons');
+    // Ab 0.2: Installer (Windows-Setup, Mac-DMG) als großer Knopf, das ZIP darunter. Das Update im Programm nimmt
+    // weiter "files" (ZIP); "installers" liest nur diese Seite.
+    const zips = [];
     for (const key of ['windows', 'macos']) {
-      const f = r.files && r.files[key];
-      if (!f) continue;
+      const inst = r.installers && r.installers[key], f = r.files && r.files[key];
+      const main = inst || f;
+      if (!main) continue;
       const a = text('a', 'Download für ' + NAMES[key], 'btn');
-      a.href = f.file;
-      a.append(text('small', f.file));
+      a.href = main.file;
+      a.append(text('small', main.file.split('/').pop()));
       buttons.append(a);
+      if (inst && f) zips.push([key, f]);
     }
     box.append(buttons);
+    if (zips.length) {
+      const p = text('p', 'Ohne Installation: ', 'meta');
+      zips.forEach(([key, f], i) => { const l = text('a', 'ZIP für ' + NAMES[key]); l.href = f.file; if (i) p.append(' · '); p.append(l); });
+      box.append(p);
+    }
     const notes = String(r.notes || '').split('\n').map((l) => l.replace(/^[-•]\s*/, '').trim()).filter(Boolean);
     if (notes.length) { box.append(text('h3', 'Neu in dieser Version (englisch, wie im Programm)')); const ul = document.createElement('ul'); notes.forEach((n) => ul.append(text('li', n))); box.append(ul); }
     const table = document.getElementById('older');
-    for (const v of all) for (const key of ['windows', 'macos']) {
-      const f = v.files && v.files[key];
+    for (const v of all) for (const key of ['windows', 'macos']) for (const f of [v.installers && v.installers[key], v.files && v.files[key]]) {
       if (!f) continue;
       const tr = document.createElement('tr');
-      const link = text('a', f.file); link.href = f.file;
+      const link = text('a', f.file.split('/').pop()); link.href = f.file;
       const td = document.createElement('td'); td.append(link);
       tr.append(text('td', v.version), text('td', NAMES[key]), td, text('td', 'SHA-256 ' + (f.sha256 || '–'), 'sha'));
       table.append(tr);
